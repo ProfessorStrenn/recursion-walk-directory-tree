@@ -25,6 +25,7 @@ public class Main {
 	 * 
 	 * @param dir
 	 * @param indentation
+	 *            Indentation level of dir.
 	 */
 	public static void printDirectoryTree(File dir, int indentation) {
 		for (File f : dir.listFiles()) {
