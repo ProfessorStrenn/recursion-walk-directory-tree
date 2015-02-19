@@ -16,10 +16,16 @@ public class Main {
 	public static void main(String[] args) {
 		String cwd = Paths.get("").toAbsolutePath().toString();
 		printDirectoryTree(new File(cwd), 0);
-
 	}
 
 
+	/**
+	 * Prints the directory tree starting at dir to the standard output. Files are indented according to their depth in
+	 * the subtree.
+	 * 
+	 * @param dir
+	 * @param indentation
+	 */
 	public static void printDirectoryTree(File dir, int indentation) {
 		for (File f : dir.listFiles()) {
 			out.println(repeat('\t', indentation) + f.getName());
