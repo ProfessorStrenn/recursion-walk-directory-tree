@@ -8,6 +8,11 @@ import java.nio.file.*;
 
 public class Main {
 
+	/**
+	 * Prints the directory tree of the current working directory.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		String cwd = Paths.get("").toAbsolutePath().toString();
 		printDirectoryTree(new File(cwd), 0);
