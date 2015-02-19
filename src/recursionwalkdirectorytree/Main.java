@@ -24,14 +24,13 @@ public class Main {
 	 * the subtree.
 	 * 
 	 * @param dir
-	 * @param indentation
-	 *            Indentation level of dir.
+	 * @param indentationLevel
 	 */
-	public static void printDirectoryTree(File dir, int indentation) {
+	public static void printDirectoryTree(File dir, int indentationLevel) {
 		for (File f : dir.listFiles()) {
-			out.println(repeat('\t', indentation) + f.getName());
+			out.println(repeat('\t', indentationLevel) + f.getName());
 			if (f.isDirectory())
-				printDirectoryTree(f, indentation + 1);
+				printDirectoryTree(f, indentationLevel + 1);
 		}
 
 	}
